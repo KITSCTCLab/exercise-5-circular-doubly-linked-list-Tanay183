@@ -36,7 +36,7 @@ class DoublyCircularLinkedList:
 
     def get(self, index) -> int:
         # Write code here
-        
+        return index
 
     def delete_at_index(self, index) -> bool:
         # Write code here

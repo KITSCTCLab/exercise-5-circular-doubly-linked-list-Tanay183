@@ -53,6 +53,7 @@ class DoublyCircularLinkedList:
 
     def get_previous_next(self, index) -> list:
         # Write code here
+        return index.prev.next
 
 
 # Do not change the following code

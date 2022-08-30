@@ -12,18 +12,44 @@ class DoublyCircularLinkedList:
 
     def add_at_tail(self, data) -> bool:
         # Write code here
+        end.next=data
+        data.prev=end
+        end=data
+        data.next=head.prev
+        head.prev=end
+        
 
     def add_at_head(self, data) -> bool:
         # Write code here
+        head.prev=data
+        data.next=head
+        head=data
+        data.prev=end.next
+        end.next=head
 
     def add_at_index(self, index, data) -> bool:
         # Write code here
+        data.next=index
+        data.prev=index.prev
+        data.prev.next=data
+        index.prev=data
 
     def get(self, index) -> int:
         # Write code here
+        
 
     def delete_at_index(self, index) -> bool:
         # Write code here
+        if index.prev==NULL:
+            head=index.next
+            head.prev=end.next
+        elif index.next==NULL:
+            end=index.prev
+            end.next=NULL
+        else:
+            index.prev.next=index.next
+            index.next.prev=index.prev
+        delete(n)
 
     def get_previous_next(self, index) -> list:
         # Write code here
